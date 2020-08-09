@@ -25,4 +25,7 @@ Prerequisites
 Execute automation tests
 
     mvn clean test
+    
+Results
+  Refer the result file: StackOverFlow/target/surefire-reports/index.html
  
