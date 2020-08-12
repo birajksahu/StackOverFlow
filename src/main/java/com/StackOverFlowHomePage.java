@@ -6,12 +6,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+/**
+ * Page Object of Stackoverflow landing page
+ * @author biraj
+ *
+ */
 public class StackOverFlowHomePage {
     WebDriver driver;
     @FindBy(xpath="//a[contains(text(),'Browse questions')]")
-    WebElement browseQuestions;    
-
+    WebElement browseQuestions;  
+    
+    /**
+     * 
+     * @param driver
+     */
     public StackOverFlowHomePage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this); //This initElements method will create all WebElements

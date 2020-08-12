@@ -12,12 +12,18 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-
+/**
+ * Class file for complete flow of the test case of Stackoverflow
+ * @author biraj
+ *
+ */
 public class TestStackOverFlow{
     WebDriver driver;
     StackOverFlowHomePage objStackOverFlowHomePage;
     StackOverFlowQuestionsPage objStackOverFlowQuestions; 
-
+    /**
+     * Test tear up
+     */
     @BeforeTest
     public void setup(){
     	/*
@@ -29,9 +35,9 @@ public class TestStackOverFlow{
     }
 
 	/**
-	 * @throws InterruptedException 
 	 * In this test, we are using page objects to extract max count of 
 	 * questions and its corresponding tag name
+	 * @throws InterruptedException 
 	 */
 	@Test
 	public void testStackOverFlow() throws InterruptedException {
@@ -45,6 +51,9 @@ public class TestStackOverFlow{
 		String tagName = objStackOverFlowQuestions.getTagName(maxQuestion);
 		Reporter.log("The Tag Name: "+tagName+" has maximum question count of: "+maxQuestion, true);
 	}
+	/**
+	 * Suite tear down
+	 */
 	@AfterTest
 	public void teardown() {
 		driver.close();
